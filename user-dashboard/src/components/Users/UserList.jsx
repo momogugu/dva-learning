@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {PropTypes} from 'react';
 import {Table, message, Popconfirm} from 'antd';
 
 const UserList = ({
@@ -14,13 +14,17 @@ const UserList = ({
     key: 'name',
     render: (text) => <a href="#">{text}</a>
   }, {
-    title: '年龄',
-    dataIndex: 'age',
-    key: 'age'
+    title: '邮箱',
+    dataIndex: 'email',
+    key: 'email'
   }, {
     title: '住址',
-    dataIndex: 'address',
+    dataIndex: 'address.street',
     key: 'address'
+  }, {
+    title: '个人网站',
+    dataIndex: 'website',
+    key: 'website'
   }, {
     title: '操作',
     key: 'operation',

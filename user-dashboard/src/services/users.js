@@ -1,5 +1,5 @@
 import request from '../utils/request';
-import qs from 'qs';
-async function query(params) {
-  return request('/api/users?$(qs.stringify(params))');
+
+export function fetch({page = 1}) {
+  return request('/api/users?_page=${page}&_limit=5');
 }
