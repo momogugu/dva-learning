@@ -1,9 +1,12 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'dva';
+import {Layout} from 'antd';
+const {Header, Content, Footer, Sider} = Layout;
 
 import styles from './Users.css';
 
-import Header from '../components/Header/Header'
+import MainContainer from '../components/MainContainer/MainContainer';
+
 // 用户筛选搜索框
 import UserList from '../components/Users/UserList';
 // 用户信息展示列表
@@ -25,12 +28,11 @@ function Users({location, dispatch, users}) {
   };
   const userModalProps = {};
   return (
-    <div className={styles.normal}>
-      <Header />
+    <MainContainer location={location}>
       <UserSearch {...userSearchProps} />
       <UserList {...userListProps} />
       <UserModal {...userModalProps} />
-    </div>
+    </MainContainer>
   );
 }
 

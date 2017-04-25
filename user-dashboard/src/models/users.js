@@ -51,7 +51,7 @@ export default {
   reducers: {
     save(state, {payload: {data: list, total}}) {
       return {...state, list, total, loading: false};
-    },
+    }, // 使用服务器数据返回
     showLoading(state, action) {
       return {...state, loading: true};
     }, // 控制加载状态的reducer
