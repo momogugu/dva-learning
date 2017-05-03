@@ -1,23 +1,21 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'dva';
-import {Layout} from 'antd';
-const {Header, Content, Footer, Sider} = Layout;
 
 import styles from './Users.css';
 
-import MainContainer from '../components/MainContainer/MainContainer';
+import MainContainer from '../MainContainer';
 
 // 用户筛选搜索框
-import UserList from '../components/Users/UserList';
+import UserList from '../../components/Users/UserList';
 // 用户信息展示列表
-import UserSearch from '../components/Users/UserSearch';
+import UserSearch from '../../components/Users/UserSearch';
 // 添加用户 & 修改用户弹出的浮框
-import UserModal from '../components/Users/UserModal';
+import UserModal from '../../components/Users/UserModal';
 
-function Users({location, dispatch, users}) {
+function Users({location, dispatch, app}) {
   const {
     loading, list, total, current, currentItem, modalVisible, modalType
-  } = users.users;
+  } = app.users;
 
   const userSearchProps = {};
   const userListProps = {
@@ -37,12 +35,14 @@ function Users({location, dispatch, users}) {
 }
 
 Users.propTypes = {
-  users: PropTypes.object
+  location: PropTypes.object,
+  dispatch: PropTypes.func,
+  app: PropTypes.object
 }
 
 // 指定订阅数据，关联了users
-function mapStateToProps(users) {
-  return {users};
+function mapStateToProps(app) {
+  return {app};
 }
 
 // 建立数据关联关系

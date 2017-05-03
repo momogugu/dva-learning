@@ -1,17 +1,17 @@
 import React from 'react';
 import { Router, Route } from 'dva/router';
 
-import IndexPage from './routes/IndexPage';
+import IndexPage from './routes/Index/IndexPage';
 
-import Users from "./routes/Users";
+import Users from "./routes/Users/Users";
 
-import A from "./routes/A.js";
+import A from "./routes/A/A.js";
 
-import B from "./routes/B.js";
+import B from "./routes/B/B.js";
 
-import C from "./routes/C.js";
+import C from "./routes/C/C.js";
 
-import D from "./routes/D.js";
+import D from "./routes/D/D.js";
 
 function RouterConfig({ history }) {
   return (

@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './D.css';
+import styles from './C.css';
 
-import MainContainer from '../components/MainContainer/MainContainer'
+import MainContainer from '../MainContainer'
 
-function D({location}) {
+function C({location}) {
   return (
     <MainContainer location={location}>
       <div className={styles.normal}>
-        404 not found
+        Route Component: C
       </div>
     </MainContainer>
   );
@@ -18,4 +18,4 @@ function mapStateToProps() {
   return {};
 }
 
-export default connect(mapStateToProps)(D);
+export default connect(mapStateToProps)(C);

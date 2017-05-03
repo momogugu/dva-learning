@@ -3,7 +3,7 @@ import { connect } from 'dva';
 
 
 import styles from './IndexPage.css';
-import MainContainer from '../components/MainContainer/MainContainer';
+import MainContainer from '../MainContainer';
 
 function IndexPage({location}) {
   return (

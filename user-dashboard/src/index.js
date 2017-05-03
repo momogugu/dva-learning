@@ -10,6 +10,7 @@ const app = dva({
   history: useRouterHistory(createHashHistory)({queryKey: false})
 });
 
+app.model(require('./models/app'));
 app.model(require("./models/users"));
 
 // 2. Plugins

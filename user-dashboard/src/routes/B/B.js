@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import styles from './B.css';
 
-import MainContainer from '../components/MainContainer/MainContainer'
+import MainContainer from '../MainContainer'
 
 function B({location}) {
   return (
