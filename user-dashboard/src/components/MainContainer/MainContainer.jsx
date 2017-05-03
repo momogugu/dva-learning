@@ -18,8 +18,8 @@ const MainContainer = ({children, location}) => {
   }
   return (
     <Layout>
-      <Sider style={{overflow: 'auto'}}>
-        <Menu mode="inline" theme="dark" onOpenChange={onOpenChange} selectedKeys={[location.pathname]}>
+      <Sider style={{overflow: 'auto', background: '#fff'}}>
+        <Menu mode="inline" onOpenChange={onOpenChange} selectedKeys={[location.pathname]}>
           <Menu.Item key="/">
             <Link to="/"><Icon type="home" />Home</Link>
           </Menu.Item>
